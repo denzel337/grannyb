@@ -1,4 +1,4 @@
-body, html {
+ body, html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -14,6 +14,10 @@ body {
   background-color: #F4F4F4;
 
 }
+  h1  {
+    color: #76323F;
+}
+
 .lunch_specials {
   text-align: center;
   background-color: white;
@@ -21,18 +25,20 @@ body {
   -webkit-column-count: 2; /* Chrome, Safari, Opera */
    -moz-column-count: 2; /* Firefox */
    column-count: 2;
-   background-image: url("../images/cooking1.jpg");
-background-size: cover;
-background-repeat: no-repeat;
-margin: 5px;
+   background-image: url("../images/veggi.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin: 5px;
 
 }
-.lunch_specials background-image{
+ul img {width: 80px;
 
 
 }
 ul {
   list-style: none;
+  display:inline;
 
 }
 .daily {
@@ -43,14 +49,10 @@ ul {
 
 }
 
-.half_dinners {
-
-  background-color: white;
-
-}
 h1, h2, h3, h4, h5 {
   margin: 5px;
 }
+
 
 header, nav, footer, section, div {
   box-sizing: border-box;
@@ -58,6 +60,13 @@ header, nav, footer, section, div {
 .menu {
   border: 3px solid #373737;
   margin: 10px;
+}
+
+.menu img {
+  width: 50%;
+}
+.hours {
+  text-align: center;
 }
 /*
  *
@@ -124,8 +133,17 @@ header, nav, footer, section, div {
   width: 24%;
   text-align: center;
   line-height: 5px;
-  padding: 24px;
+  padding: 12px;
   text-transform: uppercase;
+
+}
+.nav__item1  {
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  line-height: 5px;
+
+  margin: 0;
 
 }
 
