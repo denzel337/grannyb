@@ -1,5 +1,4 @@
  body, html {
-  margin: 0;
   width: 100%;
   height: 100%;
 }
@@ -19,10 +18,11 @@ h1  {
     text-shadow: -4px 3px 4px black;
 
 }
+
 h2  {
   font-family: 'Rammetto One', cursive;
   color: #e90306;
-text-shadow: -4px 3px 4px black;
+  text-shadow: -4px 3px 4px black;
 }
 
 .lunch_specials {
@@ -67,8 +67,6 @@ text-align: center;
 }
 ul img {
   width: 80px;
-
-
 }
 ul {
   list-style: none;
@@ -80,24 +78,79 @@ position: absolute;
 right: 15px;
 }
 .catering{
-background-color: blue;
-display: table;
--webkit-column-count: 2; /* Chrome, Safari, Opera */
- -moz-column-count: 2; /* Firefox */
- column-count: 2;
-text-align: right;
-}
-.cat{
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+   -moz-column-count: 3; /* Firefox */
+   column-count: 3;
+   column-gap: 10px;
+
+   margin-top:40px;
+   margin-left: 40px
 
 }
 
 
+
+
+.meat{
+  text-align: center;
+  break-before: avoid-column;
+
+}
+.meatsHeader{
+  line-height: 3px;
+}
+.sides{
+text-align: center;
+  margin-bottom: 20em;
+}
+.dessertsCatering{
+break-inside:avoid;
+text-align: center;
+}
+.sidesHeader, .meatsHeader,.dessertsHeader {
+  margin-right: 5em;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-size: 4em;
+  line-height: 1em;
+  margin-left: 3em;
+}
+
+.sidesHeader:before,.meatsHeader:before, .meatsHeader:after, .sidesHeader:after {
+  background-color: #ddd;
+  content: '\a0';
+  flex-grow: 1;
+  height: 1px;
+  position: relative;
+  top: 0.5em;
+}
+
+.sidesHeader:before, .meatsHeader:before {
+  margin-right:10px;
+}
+.sidesHeader:after, .meatsHeader:after {
+  margin-left:10px;
+}
 .daily {
     text-align: center;
     background-color: white;
     display: inline-block;
     color: #C0B283;
+}
+#google-reviews{
+  display: block;
+}
 
+
+.food {
+
+}
+.info{
+  display: block;
+  float:right;
 }
 
 h1, h2, h3, h4, h5 {
@@ -112,12 +165,10 @@ nav, footer, section, div {
   width: 50%;
 }
 
-
 .hours {
   text-align: center;
   line-height: 1px;
   color: black;
-
 }
 .hours i {
   font-size: 12px;
@@ -141,8 +192,6 @@ nav, footer, section, div {
   line-height:7;
 }
 
-
-
  .banner h1{
   font-size: 4em;
   text-shadow: -5px 6px 0px black;
@@ -152,7 +201,7 @@ nav, footer, section, div {
 .nav {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
+  width: 93%;
   position: absolute;
   top:0;
 
@@ -161,8 +210,6 @@ nav, footer, section, div {
 .nav__list {
   width: auto;
   padding: 0;
-  margin: 0;
-
 }
 
 .nav__item  {
@@ -197,8 +244,6 @@ nav, footer, section, div {
   color: #e90306;
 
 }
-
-
 /*
  *
  * Main
@@ -211,7 +256,6 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 /*
  *
@@ -230,6 +274,15 @@ footer h1 {
   color: white;
   margin:10px
 }
+th {
+  text-align: right;
+  color: blue;
+}
+
+#map {
+        height: 200px;
+        width: 25%;
+       }
  /*
   *
   * responsive design
@@ -238,26 +291,31 @@ footer h1 {
 
 
 @media only screen and (max-width: 620px) {
-    .lunch_specials , .daily_specials {
+    .lunch_specials , .daily_specials{
         font-size: 12px;
         line-height: 1em;
         column-count: 2;
         -webkit-column-count: 2; /* Chrome, Safari, Opera */
          -moz-column-count: 2;
          padding: 0;
-
-
-
     }
+  }
 
     @media only screen and (max-width: 499px) {
         .daily_Header {
-        font-size: 10px
-
+        font-size: 10px;
         }
+        .hours {
+        font-size: 13px;
 
-        @media only screen and (max-width: 499px) {
-            .hours {
-            font-size: 13px
+}
+}
 
-            }
+@media only screen and (max-width: 1170px) {
+          .catering {
+          margin-left:0;
+
+
+          }
+
+}
